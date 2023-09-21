@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 載入LightBox的CSS -->
+    <link rel="stylesheet" href="./lightBox/css/lightbox.css">
+    <style>
+        .wrap {
+            width: 960px;
+            margin: auto;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .wrap img {
+            width: 318px;
+            /* 拿到圖片下方自動的空白列 */
+            vertical-align: top;
+
+        }
+        .box{
+            margin-right: 2px;
+            margin-bottom: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">        
+        <div class="box">
+            <a href="./images/image-1.jpg" data-lightbox="group" data-title="PHOTO-1">
+                <img src="./images/image-1.jpg" alt="">
+            </a>
+        </div>
+        <div class="box">
+            <a href="./images/image-2.jpg" data-lightbox="group" data-title="PHOTO-2">
+                <img src="./images/image-2.jpg" alt="">
+            </a>
+        </div>
+        <div class="box">
+            <a href="./images/image-3.jpg" data-lightbox="group" data-title="PHOTO-3">
+                <img src="./images/image-3.jpg" alt="">
+            </a>
+        </div>        
+        <div class="box">
+            <a href="./images/image-4.jpg" data-lightbox="group" data-title="PHOTO-4">
+                <img src="./images/image-4.jpg" alt="">
+            </a>
+        </div>
+        <div class="box">
+            <a href="./images/image-5.jpg" data-lightbox="group" data-title="PHOTO-5">
+                <img src="./images/image-5.jpg" alt="">
+            </a>
+        </div>
+        <div class="box">
+            <a href="./images/image-6.jpg" data-lightbox="group" data-title="PHOTO-6">
+                <img src="./images/image-6.jpg" alt="">
+            </a>
+        </div>        
+    </div>
+
+    <!-- 載入jQuery主程式的JS -->
+    <script src="./lightBox/js/lightbox-plus-jquery.js"></script>
+    <!-- 載入LightBox的主程式JS -->
+    <script src="./lightBox/js/lightbox.js"></script>
+    <!-- 載入瀑布流的主程式JS -->
+    <script src="./masonry/imagesloaded.pkgd.min.js"></script>
+    <script src="./masonry/masonry.pkgd.min.js"></script>
+    <script>
+        $(function(){
+            $('.wrap').imagesLoaded(function(){
+                $('.wrap').masonry();
+            });
+        });
+    </script>
+</body>
+
+</html>
